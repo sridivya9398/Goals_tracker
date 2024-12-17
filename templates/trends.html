@@ -1,0 +1,27 @@
+<canvas id="trendChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    async function fetchTrends() {
+        const response = await fetch('/trends/1');
+        const trends = await response.json();
+
+        const labels = trends.map(t => Object.keys(t)[0]);
+        const data = trends.map(t => Object.values(t)[0]);
+
+        new Chart(document.getElementById('trendChart'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Average Values',
+                    data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            }
+        });
+    }
+
+    fetchTrends();
+</script>

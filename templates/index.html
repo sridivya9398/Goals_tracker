@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals Tracker Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Goals Tracker Journal</h1>
+    </header>
+
+    <main>
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Add Your Daily Data</h2>
+            <form id="data-form">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type of Data</label>
+                    <input type="text" id="type" placeholder="e.g., Exercise, Mood" required>
+                </div>
+                <div class="form-group">
+                    <label for="value">Value</label>
+                    <input type="number" id="value" placeholder="Enter value" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Data Display Section -->
+        <section class="data-display-section">
+            <h2>Stored Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User ID</th>
+                        <th>Date</th>
+                        <th>Type of Data</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body">
+                    <!-- Data rows will be dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <h2>Data Trends</h2>
+            <div>
+                <label for="chartType">Select Chart Type:</label>
+                <select id="chartType">
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                    <option value="pie">Pie</option>
+                    <option value="doughnut">Doughnut</option>
+                </select>
+                <button id="updateChart">Update Chart</button>
+            </div>
+            <canvas id="trendChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Goals Tracker Journal. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

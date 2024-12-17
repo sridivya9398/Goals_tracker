@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffe69c;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #6a11cb;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2575fc;
+}
+
+/* Data Display Section */
+.data-display-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffe69c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+
+th {
+    background: #2575fc;
+    color: #ffffff;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 0.9rem;
+}
